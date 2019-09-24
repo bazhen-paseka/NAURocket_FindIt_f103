@@ -25,7 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+	#include "lcd.h"
+	#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,7 +92,13 @@ int main(void)
   MX_GPIO_Init();
   MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
+	LCD_Init();
+	LCD_SetRotation(1);
+	LCD_FillScreen(ILI92_WHITE);
+	LCD_SetTextColor(ILI92_GREEN, ILI92_WHITE);
+	LCD_Printf("\n START\n ");
 
+	LCD_Printf(" 3D GLASS V2.0.0\n ");
   /* USER CODE END 2 */
 
   /* Infinite loop */
