@@ -24,7 +24,7 @@ FATFS USERFatFS;    /* File system object for USER logical drive */
 FIL USERFile;       /* File object for USER */
 
 /* USER CODE BEGIN Variables */
-
+extern SPI_HandleTypeDef *hspi_sd;
 /* USER CODE END Variables */    
 
 void MX_FATFS_Init(void) 
@@ -50,7 +50,9 @@ DWORD get_fattime(void)
 }
 
 /* USER CODE BEGIN Application */
-     
+void FATFS_SPI_Init(SPI_HandleTypeDef *hspi) {
+	hspi_sd = hspi;
+}
 /* USER CODE END Application */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

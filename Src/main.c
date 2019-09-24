@@ -20,16 +20,17 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "fatfs.h"
 #include "iwdg.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-	#include "lcd.h"
-	#include <string.h>
+	#include "NAURocket_FindIt_sm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,10 +94,14 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_IWDG_Init();
   MX_SPI1_Init();
   MX_USART3_UART_Init();
   MX_FATFS_Init();
+  MX_TIM3_Init();
+  MX_TIM4_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	LCD_Init();
 	LCD_SetRotation(1);
@@ -105,14 +110,15 @@ int main(void)
 	LCD_Printf("\n START\n ");
 
 	LCD_Printf(" 3D GLASS V2.0.0\n ");
+	HAL_Delay(1000);
+	  NAURocket_FindIt_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_Delay(1000);
-	  HAL_IWDG_Refresh(&hiwdg);
+	  NAURocket_FindIt_Main();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
