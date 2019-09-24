@@ -20,7 +20,10 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "fatfs.h"
 #include "iwdg.h"
+#include "spi.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -91,6 +94,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_IWDG_Init();
+  MX_SPI1_Init();
+  MX_USART3_UART_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 	LCD_Init();
 	LCD_SetRotation(1);
@@ -105,6 +111,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_Delay(1000);
+	  HAL_IWDG_Refresh(&hiwdg);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
