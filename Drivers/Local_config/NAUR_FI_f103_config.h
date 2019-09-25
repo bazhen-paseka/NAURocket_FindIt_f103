@@ -3,6 +3,15 @@
 
 	#define	NAUR_FI_F103		1
 	//	#define	NAUR_FI_F446	0
+
 	#define NAUR_FI_DEBUG_MODE	1
+
+	#define CLUSTER_512		6
+	#define CLUSTER_1024	12
+	#define CLUSTER_2048	20
+	#define CLUSTER_4096	30
+	#define CLUSTER_8192	60
+
+	#define CLUSTER_SIZE CLUSTER_1024
 
 #endif	//	NAUR_FI_F103_CONFIG_H_INCLUDED
