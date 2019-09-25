@@ -58,15 +58,11 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define TEST_PC6_Pin GPIO_PIN_13
-#define TEST_PC6_GPIO_Port GPIOC
-#define TEST_PC5_Pin GPIO_PIN_14
-#define TEST_PC5_GPIO_Port GPIOC
+#define BEEPER_Pin GPIO_PIN_13
+#define BEEPER_GPIO_Port GPIOC
 #define UART3_IRQ_Pin GPIO_PIN_3
 #define UART3_IRQ_GPIO_Port GPIOA
 #define UART3_IRQ_EXTI_IRQn EXTI3_IRQn
-#define BEEPER_Pin GPIO_PIN_15
-#define BEEPER_GPIO_Port GPIOB
 #define TEST_PA12_Pin GPIO_PIN_12
 #define TEST_PA12_GPIO_Port GPIOA
 #define CS_Pin GPIO_PIN_6
