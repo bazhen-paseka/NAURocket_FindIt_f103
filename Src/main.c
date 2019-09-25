@@ -103,14 +103,6 @@ int main(void)
   MX_TIM4_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-	LCD_Init();
-	LCD_SetRotation(1);
-	LCD_FillScreen(ILI92_WHITE);
-	LCD_SetTextColor(ILI92_GREEN, ILI92_WHITE);
-	LCD_Printf("\n START\n ");
-
-	LCD_Printf(" 3D GLASS V2.0.0\n ");
-	HAL_Delay(1000);
 	  NAURocket_FindIt_Init();
   /* USER CODE END 2 */
 
