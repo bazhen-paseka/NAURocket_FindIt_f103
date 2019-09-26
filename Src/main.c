@@ -103,14 +103,14 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-	  NAURocket_FindIt_Init();
+	  NAUR_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  NAURocket_FindIt_Main();
+	  NAUR_Main();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
