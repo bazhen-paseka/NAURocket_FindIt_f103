@@ -1,0 +1,9 @@
+[submodule "Drivers/display_ILI-93xx_sm"]
+	path = Drivers/display_ILI-93xx_sm
+	url = https://github.com/bazhen-paseka/display_ILI-93xx_sm.git
+[submodule "Drivers/ringbuffer-2019_sm"]
+	path = Drivers/ringbuffer-2019_sm
+	url = https://github.com/bazhen-paseka/ringbuffer-2019_sm.git
+[submodule "Drivers/NAURocket_FindIt_sm"]
+	path = Drivers/NAURocket_FindIt_sm
+	url = https://github.com/bazhen-paseka/NAURocket_FindIt_sm.git
