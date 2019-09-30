@@ -102,6 +102,7 @@ int main(void)
   MX_TIM4_Init();
   MX_USART2_UART_Init();
   MX_SPI2_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	  NAUR_Init();
   /* USER CODE END 2 */

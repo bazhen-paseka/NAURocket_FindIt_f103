@@ -60,11 +60,11 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define BEEPER_Pin GPIO_PIN_13
 #define BEEPER_GPIO_Port GPIOC
-#define UART3_IRQ_Pin GPIO_PIN_3
-#define UART3_IRQ_GPIO_Port GPIOA
-#define UART3_IRQ_EXTI_IRQn EXTI3_IRQn
-#define TEST_PA12_Pin GPIO_PIN_12
-#define TEST_PA12_GPIO_Port GPIOA
+#define UART_IRQ_Pin GPIO_PIN_12
+#define UART_IRQ_GPIO_Port GPIOB
+#define UART_IRQ_EXTI_IRQn EXTI15_10_IRQn
+#define TEST_PN1_Pin GPIO_PIN_12
+#define TEST_PN1_GPIO_Port GPIOA
 #define CS_Pin GPIO_PIN_6
 #define CS_GPIO_Port GPIOB
 #define SHUTDOWN_BUTTON_Pin GPIO_PIN_8
